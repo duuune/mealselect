@@ -1,0 +1,2428 @@
+[
+ {
+  "id": "karaage",
+  "name_ja": "唐揚げ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "鶏もも肉",
+   "にんにく",
+   "しょうが",
+   "醤油",
+   "片栗粉"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "揚げたてに勝てる夕飯は、そう多くない。"
+ },
+ {
+  "id": "shogayaki",
+  "name_ja": "豚の生姜焼き",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 15,
+  "ingredients": [
+   "豚ロース肉",
+   "玉ねぎ",
+   "しょうが",
+   "醤油",
+   "みりん"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "15分後、白飯が足りなくなる予定。"
+ },
+ {
+  "id": "nikujaga",
+  "name_ja": "肉じゃが",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 40,
+  "ingredients": [
+   "牛薄切り肉",
+   "じゃがいも",
+   "玉ねぎ",
+   "にんじん",
+   "しらたき",
+   "醤油",
+   "みりん"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "鍋に任せて、今日はもう頑張らない。"
+ },
+ {
+  "id": "curry-rice",
+  "name_ja": "カレーライス",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 45,
+  "ingredients": [
+   "豚こま肉",
+   "じゃがいも",
+   "玉ねぎ",
+   "にんじん",
+   "カレールー",
+   "米"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "明日の朝の分まで作ってしまえ。"
+ },
+ {
+  "id": "hambagu",
+  "name_ja": "ハンバーグ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 35,
+  "ingredients": [
+   "合いびき肉",
+   "玉ねぎ",
+   "卵",
+   "パン粉",
+   "ケチャップ"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "肉汁は正義。異論は焼いてから聞く。"
+ },
+ {
+  "id": "omurice",
+  "name_ja": "オムライス",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "鶏もも肉",
+   "玉ねぎ",
+   "卵",
+   "米",
+   "ケチャップ"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "ケチャップの匂いに勝てる大人はいない。"
+ },
+ {
+  "id": "tonjiru",
+  "name_ja": "豚汁",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "豚バラ肉",
+   "大根",
+   "にんじん",
+   "ごぼう",
+   "こんにゃく",
+   "味噌"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "具だくさんの汁と白飯。それで完成。"
+ },
+ {
+  "id": "saba-shioyaki",
+  "name_ja": "鯖の塩焼き",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 20,
+  "ingredients": [
+   "鯖",
+   "大根"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "焼くだけで店の定食になる魚。"
+ },
+ {
+  "id": "saba-misoni",
+  "name_ja": "鯖の味噌煮",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "鯖",
+   "しょうが",
+   "味噌",
+   "みりん"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "味噌としょうがの煮汁が本体。"
+ },
+ {
+  "id": "oyakodon",
+  "name_ja": "親子丼",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 20,
+  "ingredients": [
+   "鶏もも肉",
+   "玉ねぎ",
+   "卵",
+   "だしの素",
+   "米"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "卵をとじたら、もう考えなくていい。"
+ },
+ {
+  "id": "gyudon",
+  "name_ja": "牛丼",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 20,
+  "ingredients": [
+   "牛薄切り肉",
+   "玉ねぎ",
+   "しょうが",
+   "醤油",
+   "みりん",
+   "米"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "つゆだくの権利は作った人にある。"
+ },
+ {
+  "id": "tonkatsu",
+  "name_ja": "とんかつ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 35,
+  "ingredients": [
+   "豚ロース肉",
+   "卵",
+   "小麦粉",
+   "パン粉",
+   "キャベツ"
+  ],
+  "heaviness": 5,
+  "rarity": 1,
+  "note": "衣の音で今日の疲れを上書きする。"
+ },
+ {
+  "id": "yakisoba",
+  "name_ja": "ソース焼きそば",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 15,
+  "ingredients": [
+   "焼きそば麺",
+   "豚バラ肉",
+   "キャベツ",
+   "もやし",
+   "中濃ソース"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "ソースの焦げる匂いは反則。"
+ },
+ {
+  "id": "yasai-itame",
+  "name_ja": "肉野菜炒め",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 15,
+  "ingredients": [
+   "豚こま肉",
+   "キャベツ",
+   "もやし",
+   "ピーマン",
+   "にんじん"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "強火3分、野菜が山ほど食える。"
+ },
+ {
+  "id": "gyoza",
+  "name_ja": "焼き餃子",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 40,
+  "ingredients": [
+   "豚ひき肉",
+   "キャベツ",
+   "にら",
+   "にんにく",
+   "餃子の皮"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "包んだ数だけ幸せになれる。"
+ },
+ {
+  "id": "oden",
+  "name_ja": "おでん",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 60,
+  "ingredients": [
+   "大根",
+   "卵",
+   "こんにゃく",
+   "ちくわ",
+   "はんぺん",
+   "だしの素"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "大根に味が沁みるまでが料理。"
+ },
+ {
+  "id": "korokke",
+  "name_ja": "コロッケ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 50,
+  "ingredients": [
+   "じゃがいも",
+   "合いびき肉",
+   "玉ねぎ",
+   "卵",
+   "パン粉"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "揚げたてのコロッケは事件。"
+ },
+ {
+  "id": "tempura",
+  "name_ja": "天ぷら",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 40,
+  "ingredients": [
+   "えび",
+   "なす",
+   "かぼちゃ",
+   "大葉",
+   "小麦粉"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "揚げたてを立ち食いする特権つき。"
+ },
+ {
+  "id": "yosenabe",
+  "name_ja": "寄せ鍋",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "鶏もも肉",
+   "白菜",
+   "豆腐",
+   "しいたけ",
+   "長ねぎ",
+   "だしの素"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "切って煮るだけで、ごちそうの顔。"
+ },
+ {
+  "id": "sukiyaki",
+  "name_ja": "すき焼き",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "牛薄切り肉",
+   "白菜",
+   "長ねぎ",
+   "豆腐",
+   "しらたき",
+   "卵"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "溶き卵の中は、いつだって祝日。"
+ },
+ {
+  "id": "chikuzenni",
+  "name_ja": "筑前煮",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 45,
+  "ingredients": [
+   "鶏もも肉",
+   "れんこん",
+   "ごぼう",
+   "にんじん",
+   "こんにゃく",
+   "しいたけ"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "作れる人、って顔ができる煮物。"
+ },
+ {
+  "id": "buta-kakuni",
+  "name_ja": "豚の角煮",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 65,
+  "ingredients": [
+   "豚バラブロック",
+   "卵",
+   "長ねぎ",
+   "しょうが",
+   "醤油"
+  ],
+  "heaviness": 5,
+  "rarity": 2,
+  "note": "箸で切れる豚バラは、待つ価値がある。"
+ },
+ {
+  "id": "iwashi-kabayaki",
+  "name_ja": "いわしの蒲焼き",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 20,
+  "ingredients": [
+   "いわし",
+   "しょうが",
+   "醤油",
+   "みりん",
+   "小麦粉"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "甘辛だれ、いわしの脂、白飯。以上。"
+ },
+ {
+  "id": "agedashi-dofu",
+  "name_ja": "揚げ出し豆腐",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 20,
+  "ingredients": [
+   "豆腐",
+   "大根",
+   "片栗粉",
+   "だしの素"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "カリッ、じゅわっ。豆腐の主役回。"
+ },
+ {
+  "id": "karei-nitsuke",
+  "name_ja": "カレイの煮付け",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "カレイ",
+   "しょうが",
+   "醤油",
+   "みりん",
+   "砂糖"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "煮汁をかけた白飯まで含めて一皿。"
+ },
+ {
+  "id": "tonteki",
+  "name_ja": "トンテキ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 20,
+  "ingredients": [
+   "豚ロース肉",
+   "にんにく",
+   "キャベツ",
+   "中濃ソース"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "厚切り肉とにんにく。負ける気がしない。"
+ },
+ {
+  "id": "chanchan-yaki",
+  "name_ja": "鮭のちゃんちゃん焼き",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "鮭",
+   "キャベツ",
+   "玉ねぎ",
+   "味噌",
+   "バター"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "味噌バターの湯気で北海道になる。"
+ },
+ {
+  "id": "tsukune",
+  "name_ja": "鶏つくね",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "鶏ひき肉",
+   "長ねぎ",
+   "卵",
+   "片栗粉",
+   "醤油",
+   "みりん"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "ふわふわの肉団子を甘辛で照らす。"
+ },
+ {
+  "id": "motsuni",
+  "name_ja": "もつ煮込み",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 60,
+  "ingredients": [
+   "豚もつ",
+   "大根",
+   "にんじん",
+   "こんにゃく",
+   "味噌",
+   "しょうが"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "居酒屋の一番人気を鍋ごと独占。"
+ },
+ {
+  "id": "buri-daikon",
+  "name_ja": "ぶり大根",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 40,
+  "ingredients": [
+   "ぶり",
+   "大根",
+   "しょうが",
+   "醤油",
+   "みりん"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "ぶりの脂を大根が全部覚えてる。"
+ },
+ {
+  "id": "ebi-fry",
+  "name_ja": "エビフライ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "えび",
+   "卵",
+   "小麦粉",
+   "パン粉",
+   "キャベツ"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "尻尾まで食べる派に朗報の揚げたて。"
+ },
+ {
+  "id": "piman-nikuzume",
+  "name_ja": "ピーマンの肉詰め",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "ピーマン",
+   "合いびき肉",
+   "玉ねぎ",
+   "卵",
+   "パン粉"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "ピーマンが肉のうつわになる日。"
+ },
+ {
+  "id": "chicken-nanban",
+  "name_ja": "チキン南蛮",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 35,
+  "ingredients": [
+   "鶏むね肉",
+   "卵",
+   "小麦粉",
+   "マヨネーズ",
+   "砂糖",
+   "酢"
+  ],
+  "heaviness": 5,
+  "rarity": 2,
+  "note": "甘酢とタルタル、宮崎の発明。"
+ },
+ {
+  "id": "roll-cabbage",
+  "name_ja": "ロールキャベツ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 50,
+  "ingredients": [
+   "キャベツ",
+   "合いびき肉",
+   "玉ねぎ",
+   "卵",
+   "コンソメ"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "キャベツを剥がして包む夜は、優しい。"
+ },
+ {
+  "id": "noppe",
+  "name_ja": "のっぺ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 45,
+  "ingredients": [
+   "里芋",
+   "にんじん",
+   "こんにゃく",
+   "しいたけ",
+   "鶏もも肉",
+   "だしの素"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "新潟の実家みたいな煮物、静かに沁みる。"
+ },
+ {
+  "id": "jibuni",
+  "name_ja": "治部煮",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 30,
+  "ingredients": [
+   "鶏もも肉",
+   "麩",
+   "しいたけ",
+   "ほうれん草",
+   "片栗粉",
+   "醤油",
+   "みりん"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "金沢の武家料理を平日にやる贅沢。"
+ },
+ {
+  "id": "hittsumi",
+  "name_ja": "ひっつみ",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 40,
+  "ingredients": [
+   "小麦粉",
+   "鶏もも肉",
+   "ごぼう",
+   "にんじん",
+   "長ねぎ",
+   "だしの素"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "岩手の、すいとんのもっと旨いやつ。"
+ },
+ {
+  "id": "itokoni",
+  "name_ja": "いとこ煮",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "かぼちゃ",
+   "ゆで小豆",
+   "砂糖",
+   "醤油"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "かぼちゃと小豆。甘じょっぱさの発見。"
+ },
+ {
+  "id": "sanga-yaki",
+  "name_ja": "さんが焼き",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 25,
+  "ingredients": [
+   "あじ",
+   "味噌",
+   "長ねぎ",
+   "しょうが",
+   "大葉"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "房総の漁師が叩いて焼いた味噌のあじ。"
+ },
+ {
+  "id": "hiyajiru",
+  "name_ja": "冷や汁",
+  "name_local": null,
+  "cuisine": "ja",
+  "effort_min": 15,
+  "ingredients": [
+   "ツナ缶",
+   "豆腐",
+   "きゅうり",
+   "味噌",
+   "米"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "宮崎の冷たい味噌汁を、飯にぶっかける。"
+ },
+ {
+  "id": "gapao",
+  "name_ja": "ガパオライス",
+  "name_local": "ผัดกะเพรา",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "鶏ひき肉",
+   "バジル",
+   "ピーマン",
+   "玉ねぎ",
+   "卵",
+   "ナンプラー",
+   "オイスターソース",
+   "米"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "目玉焼きを崩した瞬間が本番。"
+ },
+ {
+  "id": "green-curry",
+  "name_ja": "グリーンカレー",
+  "name_local": "แกงเขียวหวาน",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "鶏もも肉",
+   "なす",
+   "たけのこ",
+   "ココナッツミルク",
+   "グリーンカレーペースト",
+   "ナンプラー"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "ペースト任せで店の味が出る反則技。"
+ },
+ {
+  "id": "red-curry",
+  "name_ja": "レッドカレー",
+  "name_local": "แกงเผ็ด",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "鶏もも肉",
+   "たけのこ",
+   "パプリカ",
+   "ココナッツミルク",
+   "レッドカレーペースト",
+   "ナンプラー"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "赤いのに優しい、ココナッツの包容力。"
+ },
+ {
+  "id": "massaman-curry",
+  "name_ja": "マッサマンカレー",
+  "name_local": "แกงมัสมั่น",
+  "cuisine": "th",
+  "effort_min": 40,
+  "ingredients": [
+   "鶏もも肉",
+   "じゃがいも",
+   "玉ねぎ",
+   "ピーナッツ",
+   "ココナッツミルク",
+   "マッサマンカレーペースト"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "世界一旨い料理と呼ばれたカレー。"
+ },
+ {
+  "id": "tom-yum-kung",
+  "name_ja": "トムヤムクン",
+  "name_local": "ต้มยำกุ้ง",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "えび",
+   "マッシュルーム",
+   "トムヤムペースト",
+   "ライム",
+   "パクチー"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "酸っぱ辛さで今日の疲れを流す。"
+ },
+ {
+  "id": "khao-man-gai",
+  "name_ja": "カオマンガイ",
+  "name_local": "ข้าวมันไก่",
+  "cuisine": "th",
+  "effort_min": 40,
+  "ingredients": [
+   "鶏もも肉",
+   "米",
+   "しょうが",
+   "にんにく",
+   "きゅうり"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "炊飯器が今夜の主役になる。"
+ },
+ {
+  "id": "pad-thai",
+  "name_ja": "パッタイ",
+  "name_local": "ผัดไทย",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "米麺（センレック）",
+   "えび",
+   "卵",
+   "もやし",
+   "にら",
+   "ナンプラー"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "甘酸っぱい麺を屋台みたいに炒める。"
+ },
+ {
+  "id": "khao-pad",
+  "name_ja": "カオパット",
+  "name_local": "ข้าวผัด",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "米",
+   "卵",
+   "玉ねぎ",
+   "ナンプラー"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "冷蔵庫が空でも、タイには行ける。"
+ },
+ {
+  "id": "yam-woonsen",
+  "name_ja": "ヤムウンセン",
+  "name_local": "ยำวุ้นเส้น",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "春雨",
+   "豚ひき肉",
+   "えび",
+   "紫玉ねぎ",
+   "パクチー",
+   "ナンプラー",
+   "ライム"
+  ],
+  "heaviness": 1,
+  "rarity": 1,
+  "note": "春雨がライムでシャキッと目を覚ます。"
+ },
+ {
+  "id": "gai-yang",
+  "name_ja": "ガイヤーン",
+  "name_local": "ไก่ย่าง",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "鶏もも肉",
+   "にんにく",
+   "ナンプラー",
+   "オイスターソース",
+   "砂糖"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "漬けて焼くだけ、イサーンの焼き鳥。"
+ },
+ {
+  "id": "kuay-teow",
+  "name_ja": "クイッティアオ",
+  "name_local": "ก๋วยเตี๋ยว",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "米麺（センレック）",
+   "豚こま肉",
+   "もやし",
+   "パクチー",
+   "鶏ガラスープの素",
+   "ナンプラー"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "屋台の麺を自宅のどんぶりで再現。"
+ },
+ {
+  "id": "som-tam",
+  "name_ja": "ソムタム",
+  "name_local": "ส้มตำ",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "にんじん",
+   "いんげん",
+   "ミニトマト",
+   "ピーナッツ",
+   "ナンプラー",
+   "ライム"
+  ],
+  "heaviness": 1,
+  "rarity": 1,
+  "note": "叩いて和えるだけの中毒性サラダ。"
+ },
+ {
+  "id": "tom-kha-gai",
+  "name_ja": "トムカーガイ",
+  "name_local": "ต้มข่าไก่",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "鶏もも肉",
+   "マッシュルーム",
+   "ココナッツミルク",
+   "しょうが",
+   "ナンプラー",
+   "ライム"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "ココナッツのスープは飲む優しさ。"
+ },
+ {
+  "id": "larb-gai",
+  "name_ja": "ラープガイ",
+  "name_local": "ลาบไก่",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "鶏ひき肉",
+   "紫玉ねぎ",
+   "パクチー",
+   "ナンプラー",
+   "ライム",
+   "唐辛子"
+  ],
+  "heaviness": 1,
+  "rarity": 1,
+  "note": "ハーブとライムで肉が軽くなる魔法。"
+ },
+ {
+  "id": "pad-see-ew",
+  "name_ja": "パッシーユー",
+  "name_local": "ผัดซีอิ๊ว",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "米麺（センレック）",
+   "豚こま肉",
+   "小松菜",
+   "卵",
+   "オイスターソース",
+   "醤油"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "醤油の焦げた米麺、無限に入る。"
+ },
+ {
+  "id": "kai-jeow",
+  "name_ja": "カイジアオ",
+  "name_local": "ไข่เจียว",
+  "cuisine": "th",
+  "effort_min": 10,
+  "ingredients": [
+   "卵",
+   "ナンプラー",
+   "米"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "卵とナンプラーだけで屋台になる。"
+ },
+ {
+  "id": "pad-pak-bung",
+  "name_ja": "空芯菜炒め",
+  "name_local": "ผัดผักบุ้งไฟแดง",
+  "cuisine": "th",
+  "effort_min": 10,
+  "ingredients": [
+   "空芯菜",
+   "にんにく",
+   "唐辛子",
+   "オイスターソース"
+  ],
+  "heaviness": 1,
+  "rarity": 1,
+  "note": "空芯菜、強火、30秒。それが全て。"
+ },
+ {
+  "id": "kung-gratiem",
+  "name_ja": "エビのにんにく炒め",
+  "name_local": "กุ้งผัดกระเทียม",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "えび",
+   "にんにく",
+   "オイスターソース",
+   "パクチー"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "にんにくの油までがソース。"
+ },
+ {
+  "id": "kung-pad-pong-curry",
+  "name_ja": "クンパッポンカレー",
+  "name_local": "กุ้งผัดผงกะหรี่",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "えび",
+   "卵",
+   "玉ねぎ",
+   "セロリ",
+   "カレー粉",
+   "オイスターソース",
+   "ココナッツミルク"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "ふわふわ卵とカレー粉の名店の味。"
+ },
+ {
+  "id": "gai-med-mamuang",
+  "name_ja": "鶏カシューナッツ炒め",
+  "name_local": "ไก่ผัดเม็ดมะม่วงหิมพานต์",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "鶏もも肉",
+   "カシューナッツ",
+   "玉ねぎ",
+   "ピーマン",
+   "オイスターソース"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "カシューナッツは炒め物の宝石。"
+ },
+ {
+  "id": "khao-kha-moo",
+  "name_ja": "カオカームー",
+  "name_local": "ข้าวขาหมู",
+  "cuisine": "th",
+  "effort_min": 60,
+  "ingredients": [
+   "豚バラブロック",
+   "卵",
+   "しょうが",
+   "にんにく",
+   "オイスターソース",
+   "米"
+  ],
+  "heaviness": 5,
+  "rarity": 2,
+  "note": "とろとろ豚をご飯に乗せる背徳。"
+ },
+ {
+  "id": "moo-ping",
+  "name_ja": "ムーピン",
+  "name_local": "หมูปิ้ง",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "豚肩ロース肉",
+   "にんにく",
+   "ナンプラー",
+   "オイスターソース",
+   "ココナッツミルク"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "甘い豚串の煙はバンコクの朝の匂い。"
+ },
+ {
+  "id": "tod-man-pla",
+  "name_ja": "トートマンプラー",
+  "name_local": "ทอดมันปลา",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "白身魚",
+   "レッドカレーペースト",
+   "いんげん",
+   "卵"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "プリッと辛いタイのさつま揚げ。"
+ },
+ {
+  "id": "gaeng-jued",
+  "name_ja": "ゲーンチュート",
+  "name_local": "แกงจืด",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "豚ひき肉",
+   "春雨",
+   "白菜",
+   "しいたけ",
+   "ナンプラー"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "辛くないタイ。春雨の澄んだスープ。"
+ },
+ {
+  "id": "pad-prik-king",
+  "name_ja": "パットプリッキン",
+  "name_local": "ผัดพริกขิง",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "豚こま肉",
+   "いんげん",
+   "レッドカレーペースト",
+   "ナンプラー",
+   "砂糖"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "濃厚ペースト炒め、白飯が消える系。"
+ },
+ {
+  "id": "kai-palo",
+  "name_ja": "パロー",
+  "name_local": "ไข่พะโล้",
+  "cuisine": "th",
+  "effort_min": 40,
+  "ingredients": [
+   "豚バラ肉",
+   "卵",
+   "豆腐",
+   "五香粉",
+   "醤油",
+   "砂糖"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "五香粉の甘い香りの卵煮込み。"
+ },
+ {
+  "id": "nuea-pad-namman-hoi",
+  "name_ja": "牛肉のオイスター炒め",
+  "name_local": "เนื้อผัดน้ำมันหอย",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "牛薄切り肉",
+   "玉ねぎ",
+   "ピーマン",
+   "オイスターソース"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "オイスターソースは牛のためにある。"
+ },
+ {
+  "id": "pla-nueng-manao",
+  "name_ja": "白身魚のライム蒸し",
+  "name_local": "ปลานึ่งมะนาว",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "白身魚",
+   "にんにく",
+   "ライム",
+   "パクチー",
+   "ナンプラー",
+   "唐辛子"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "ライムと唐辛子で魚が跳ねる蒸し物。"
+ },
+ {
+  "id": "khao-tom",
+  "name_ja": "カオトム",
+  "name_local": "ข้าวต้ม",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "米",
+   "豚ひき肉",
+   "しょうが",
+   "パクチー",
+   "ナンプラー",
+   "鶏ガラスープの素"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "タイの朝の雑炊を、疲れた夜に。"
+ },
+ {
+  "id": "gai-tod",
+  "name_ja": "ガイトート",
+  "name_local": "ไก่ทอด",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "鶏もも肉",
+   "にんにく",
+   "ナンプラー",
+   "片栗粉"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "ナンプラー衣のフライドチキン。"
+ },
+ {
+  "id": "panang-curry",
+  "name_ja": "パネーンカレー",
+  "name_local": "พะแนง",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "豚こま肉",
+   "ココナッツミルク",
+   "レッドカレーペースト",
+   "ピーナッツ",
+   "バジル"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "濃厚で甘い、カレーの最終形態。"
+ },
+ {
+  "id": "pad-kee-mao",
+  "name_ja": "パッキーマオ",
+  "name_local": "ผัดขี้เมา",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "米麺（センレック）",
+   "豚ひき肉",
+   "バジル",
+   "にんにく",
+   "唐辛子",
+   "オイスターソース"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "「酔っ払い麺」という名の激辛炒め。"
+ },
+ {
+  "id": "thai-suki",
+  "name_ja": "タイスキ",
+  "name_local": "สุกี้",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "豚こま肉",
+   "春雨",
+   "白菜",
+   "豆腐",
+   "卵",
+   "スイートチリソース"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "鍋なのに、タレが主役のタイすき。"
+ },
+ {
+  "id": "pla-rad-prik",
+  "name_ja": "プラーラートプリック",
+  "name_local": "ปลาราดพริก",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "白身魚",
+   "にんにく",
+   "スイートチリソース",
+   "片栗粉",
+   "パクチー"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "揚げた魚に甘辛チリの滝をかける。"
+ },
+ {
+  "id": "kaeng-hang-le",
+  "name_ja": "ゲーンハンレー",
+  "name_local": "แกงฮังเล",
+  "cuisine": "th",
+  "effort_min": 60,
+  "ingredients": [
+   "豚バラブロック",
+   "しょうが",
+   "にんにく",
+   "ピーナッツ",
+   "レッドカレーペースト",
+   "砂糖"
+  ],
+  "heaviness": 5,
+  "rarity": 3,
+  "note": "チェンマイの豚バラ生姜カレー、圧倒的。"
+ },
+ {
+  "id": "khao-soi",
+  "name_ja": "カオソーイ",
+  "name_local": "ข้าวซอย",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "中華麺",
+   "鶏もも肉",
+   "ココナッツミルク",
+   "レッドカレーペースト",
+   "カレー粉",
+   "紫玉ねぎ"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "揚げ麺のせカレーラーメン、北の名物。"
+ },
+ {
+  "id": "kua-kling",
+  "name_ja": "クアクリン",
+  "name_local": "คั่วกลิ้ง",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "豚ひき肉",
+   "いんげん",
+   "レッドカレーペースト",
+   "唐辛子"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "南タイの乾いた激辛炒め、覚悟が要る。"
+ },
+ {
+  "id": "nam-prik-ong",
+  "name_ja": "ナムプリックオーン",
+  "name_local": "น้ำพริกอ่อง",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "豚ひき肉",
+   "トマト",
+   "味噌",
+   "にんにく",
+   "唐辛子",
+   "きゅうり"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "北タイの肉味噌を野菜ですくう夜。"
+ },
+ {
+  "id": "gaeng-som",
+  "name_ja": "ゲーンソム",
+  "name_local": "แกงส้ม",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "白身魚",
+   "大根",
+   "レッドカレーペースト",
+   "ライム",
+   "ナンプラー"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "酸っぱ辛いスープが魚を連れてくる。"
+ },
+ {
+  "id": "ho-mok",
+  "name_ja": "ホーモック",
+  "name_local": "ห่อหมก",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "白身魚",
+   "卵",
+   "ココナッツミルク",
+   "レッドカレーペースト",
+   "バジル"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "魚のカレームース蒸し、外さない一品。"
+ },
+ {
+  "id": "khao-moo-daeng",
+  "name_ja": "カオムーデーン",
+  "name_local": "ข้าวหมูแดง",
+  "cuisine": "th",
+  "effort_min": 50,
+  "ingredients": [
+   "豚肩ロース肉",
+   "はちみつ",
+   "醤油",
+   "五香粉",
+   "卵",
+   "米"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "赤い焼豚のせご飯、バンコクの昼の顔。"
+ },
+ {
+  "id": "khao-pad-pu",
+  "name_ja": "カオパットプー",
+  "name_local": "ข้าวผัดปู",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "米",
+   "卵",
+   "かに缶",
+   "長ねぎ",
+   "ナンプラー"
+  ],
+  "heaviness": 2,
+  "rarity": 1,
+  "note": "かに炒飯、缶詰で名店ごっこができる。"
+ },
+ {
+  "id": "khao-op-sapparot",
+  "name_ja": "カオオップサッパロット",
+  "name_local": "ข้าวอบสับปะรด",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "米",
+   "えび",
+   "卵",
+   "パイナップル",
+   "カレー粉",
+   "カシューナッツ"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "パイナップル炒飯、食卓が宴会になる。"
+ },
+ {
+  "id": "khao-mok-gai",
+  "name_ja": "カオモックガイ",
+  "name_local": "ข้าวหมกไก่",
+  "cuisine": "th",
+  "effort_min": 50,
+  "ingredients": [
+   "鶏もも肉",
+   "米",
+   "カレー粉",
+   "ヨーグルト",
+   "玉ねぎ",
+   "きゅうり"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "タイ南部のビリヤニ、炊飯器でいける。"
+ },
+ {
+  "id": "khao-kai-khon",
+  "name_ja": "カオカイコン",
+  "name_local": "ข้าวไข่ข้น",
+  "cuisine": "th",
+  "effort_min": 10,
+  "ingredients": [
+   "卵",
+   "バター",
+   "牛乳",
+   "ナンプラー",
+   "米"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "とろとろ卵をご飯に流す10分の勝利。"
+ },
+ {
+  "id": "khao-yam",
+  "name_ja": "カオヤム",
+  "name_local": "ข้าวยำ",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "米",
+   "紫玉ねぎ",
+   "きゅうり",
+   "もやし",
+   "パクチー",
+   "ライム",
+   "ナンプラー"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "混ぜて食べる南部のハーブご飯サラダ。"
+ },
+ {
+  "id": "jok",
+  "name_ja": "ジョーク",
+  "name_local": "โจ๊ก",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "米",
+   "豚ひき肉",
+   "卵",
+   "しょうが",
+   "パクチー"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "とろとろ粥に生姜。弱った日の特効薬。"
+ },
+ {
+  "id": "bami-nam",
+  "name_ja": "バミーナーム",
+  "name_local": "บะหมี่น้ำ",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "中華麺",
+   "豚肩ロース肉",
+   "小松菜",
+   "にんにく",
+   "鶏ガラスープの素"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "屋台の中華麺、汁まで全部すする。"
+ },
+ {
+  "id": "rad-na",
+  "name_ja": "ラートナー",
+  "name_local": "ราดหน้า",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "米麺（センレック）",
+   "豚こま肉",
+   "小松菜",
+   "オイスターソース",
+   "片栗粉"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "とろみあんの優しさは国境を越える。"
+ },
+ {
+  "id": "kuay-teow-kua-gai",
+  "name_ja": "クイッティアオクアガイ",
+  "name_local": "ก๋วยเตี๋ยวคั่วไก่",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "米麺（センレック）",
+   "鶏もも肉",
+   "卵",
+   "レタス",
+   "醤油"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "焦がし米麺と半熟卵、中華街の隠れ玉。"
+ },
+ {
+  "id": "pad-mama",
+  "name_ja": "パットマーマー",
+  "name_local": "ผัดมาม่า",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "インスタント麺",
+   "豚ひき肉",
+   "卵",
+   "小松菜",
+   "オイスターソース"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "インスタント麺を炒めるタイの夜食堂。"
+ },
+ {
+  "id": "khanom-jeen-nam-ya",
+  "name_ja": "カノムジーンナムヤー",
+  "name_local": "ขนมจีนน้ำยา",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "そうめん",
+   "白身魚",
+   "ココナッツミルク",
+   "レッドカレーペースト",
+   "もやし"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "魚カレーをそうめんで食べる朝市の味。"
+ },
+ {
+  "id": "pad-woonsen",
+  "name_ja": "パットウンセン",
+  "name_local": "ผัดวุ้นเส้น",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "春雨",
+   "豚こま肉",
+   "卵",
+   "にら",
+   "オイスターソース"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "春雨が味を吸い切る無敵の炒め。"
+ },
+ {
+  "id": "gaeng-karee-gai",
+  "name_ja": "ゲーンカリーガイ",
+  "name_local": "แกงกะหรี่ไก่",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "鶏もも肉",
+   "じゃがいも",
+   "玉ねぎ",
+   "ココナッツミルク",
+   "カレー粉",
+   "レッドカレーペースト"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "黄色いタイカレーはやさしい甘口寄り。"
+ },
+ {
+  "id": "gaeng-pa",
+  "name_ja": "ゲーンパー",
+  "name_local": "แกงป่า",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "豚こま肉",
+   "たけのこ",
+   "いんげん",
+   "なす",
+   "レッドカレーペースト",
+   "ナンプラー"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "ココナッツ抜き直球辛口、森のカレー。"
+ },
+ {
+  "id": "gaeng-phet-pet-yang",
+  "name_ja": "ゲーンペットペットヤーン",
+  "name_local": "แกงเผ็ดเป็ดย่าง",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "合鴨ロース",
+   "パイナップル",
+   "ミニトマト",
+   "ココナッツミルク",
+   "レッドカレーペースト"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "鴨とパイナップルの宮廷カレー。"
+ },
+ {
+  "id": "gaeng-liang",
+  "name_ja": "ゲーンリアン",
+  "name_local": "แกงเลียง",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "かぼちゃ",
+   "ヤングコーン",
+   "えび",
+   "バジル",
+   "鶏ガラスープの素"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "胡椒きかせた野菜スープ、タイの実家の味。"
+ },
+ {
+  "id": "gaeng-om",
+  "name_ja": "ゲーンオム",
+  "name_local": "แกงอ่อม",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "豚こま肉",
+   "なす",
+   "いんげん",
+   "ディル",
+   "レッドカレーペースト",
+   "ナンプラー"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "ディル香るイサーンの汁物、地味に沼。"
+ },
+ {
+  "id": "gaeng-ho",
+  "name_ja": "ゲーンホ",
+  "name_local": "แกงโฮะ",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "春雨",
+   "豚こま肉",
+   "たけのこ",
+   "いんげん",
+   "レッドカレーペースト"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "残り物カレーの炒め直しが北部の名物に。"
+ },
+ {
+  "id": "tom-saep",
+  "name_ja": "トムセープ",
+  "name_local": "ต้มแซ่บ",
+  "cuisine": "th",
+  "effort_min": 45,
+  "ingredients": [
+   "豚スペアリブ",
+   "しょうが",
+   "ライム",
+   "唐辛子",
+   "ナンプラー",
+   "パクチー"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "骨付き肉の酸っぱ辛スープで汗をかく。"
+ },
+ {
+  "id": "gaeng-jued-mara",
+  "name_ja": "ゲーンチュートマラ",
+  "name_local": "แกงจืดมะระยัดไส้",
+  "cuisine": "th",
+  "effort_min": 35,
+  "ingredients": [
+   "ゴーヤ",
+   "豚ひき肉",
+   "春雨",
+   "しいたけ",
+   "ナンプラー"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "苦瓜に肉を詰める澄まし汁、体が喜ぶ。"
+ },
+ {
+  "id": "jim-jum",
+  "name_ja": "チムチュム",
+  "name_local": "จิ้มจุ่ม",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "豚こま肉",
+   "春雨",
+   "白菜",
+   "バジル",
+   "しょうが",
+   "卵",
+   "ナンプラー"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "土鍋のハーブ鍋、イサーンの夜の定番。"
+ },
+ {
+  "id": "gai-pad-khing",
+  "name_ja": "ガイパットキン",
+  "name_local": "ไก่ผัดขิง",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "鶏もも肉",
+   "しょうが",
+   "きくらげ",
+   "長ねぎ",
+   "オイスターソース"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "生姜が主役の鶏炒め、体が起きる。"
+ },
+ {
+  "id": "gai-pad-nam-prik-pao",
+  "name_ja": "ガイパットナムプリックパオ",
+  "name_local": "ไก่ผัดน้ำพริกเผา",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "鶏もも肉",
+   "チリインオイル（ナムプリックパオ）",
+   "玉ねぎ",
+   "バジル"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "甘辛ジャム炒めはご飯の加速装置。"
+ },
+ {
+  "id": "moo-tod-gratiem",
+  "name_ja": "ムートートガティアム",
+  "name_local": "หมูทอดกระเทียม",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "豚こま肉",
+   "にんにく",
+   "オイスターソース",
+   "片栗粉",
+   "パクチー"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "にんにく揚げ豚、白飯の敵にして友。"
+ },
+ {
+  "id": "pad-makhuea-yao",
+  "name_ja": "パットマクアヤオ",
+  "name_local": "ผัดมะเขือยาว",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "なす",
+   "豚ひき肉",
+   "バジル",
+   "味噌",
+   "にんにく"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "とろけたなすがひき肉と味噌を抱える。"
+ },
+ {
+  "id": "pad-priao-wan",
+  "name_ja": "パットプリアオワーン",
+  "name_local": "ผัดเปรี้ยวหวาน",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "豚こま肉",
+   "パイナップル",
+   "トマト",
+   "きゅうり",
+   "玉ねぎ",
+   "ケチャップ"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "タイ式甘酢炒めは酸味がまっすぐ。"
+ },
+ {
+  "id": "pad-cha",
+  "name_ja": "パットチャー",
+  "name_local": "ผัดฉ่าทะเล",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "シーフードミックス",
+   "にんにく",
+   "唐辛子",
+   "バジル",
+   "オイスターソース"
+  ],
+  "heaviness": 3,
+  "rarity": 3,
+  "note": "鍋が鳴く音が名前になった激辛炒め。"
+ },
+ {
+  "id": "pad-pak-ruam",
+  "name_ja": "タイの五目野菜炒め",
+  "name_local": "ผัดผักรวมมิตร",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "ブロッコリー",
+   "にんじん",
+   "ヤングコーン",
+   "きくらげ",
+   "えび",
+   "オイスターソース"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "野菜の五目炒め、タイ食堂の休息枠。"
+ },
+ {
+  "id": "kana-moo-krob",
+  "name_ja": "カナームーグロープ",
+  "name_local": "คะน้าหมูกรอบ",
+  "cuisine": "th",
+  "effort_min": 50,
+  "ingredients": [
+   "豚バラブロック",
+   "小松菜",
+   "にんにく",
+   "オイスターソース",
+   "唐辛子"
+  ],
+  "heaviness": 5,
+  "rarity": 3,
+  "note": "自家製カリカリ豚は手間の分だけ旨い。"
+ },
+ {
+  "id": "hoi-lai-pad",
+  "name_ja": "あさりのチリインオイル炒め",
+  "name_local": "หอยลายผัดน้ำพริกเผา",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "あさり",
+   "チリインオイル（ナムプリックパオ）",
+   "バジル",
+   "にんにく"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "あさりの旨味が甘辛油と結託する。"
+ },
+ {
+  "id": "kung-op-woonsen",
+  "name_ja": "クンオップウンセン",
+  "name_local": "กุ้งอบวุ้นเส้น",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "えび",
+   "春雨",
+   "しょうが",
+   "パクチー",
+   "オイスターソース",
+   "ごま油"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "鍋の底の春雨が本体という説がある。"
+ },
+ {
+  "id": "moo-wan",
+  "name_ja": "ムーワーン",
+  "name_local": "หมูหวาน",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "豚バラ肉",
+   "砂糖",
+   "ナンプラー",
+   "紫玉ねぎ"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "甘い豚の佃煮ポジション、飯が消える。"
+ },
+ {
+  "id": "moo-satay",
+  "name_ja": "ムーサテ",
+  "name_local": "หมูสะเต๊ะ",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "豚肩ロース肉",
+   "カレー粉",
+   "ココナッツミルク",
+   "ピーナッツ",
+   "砂糖"
+  ],
+  "heaviness": 3,
+  "rarity": 1,
+  "note": "ピーナッツソースの串焼き、宴会の花。"
+ },
+ {
+  "id": "kho-moo-yang",
+  "name_ja": "コームーヤーン",
+  "name_local": "คอหมูย่าง",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "豚トロ",
+   "ナンプラー",
+   "オイスターソース",
+   "にんにく",
+   "ライム"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "炙り豚トロ、ビールの正しい相棒。"
+ },
+ {
+  "id": "nuea-yang-jaew",
+  "name_ja": "ヌアヤーンジェーオ",
+  "name_local": "เนื้อย่างจิ้มแจ่ว",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "牛ステーキ肉",
+   "ライム",
+   "ナンプラー",
+   "唐辛子",
+   "パクチー",
+   "米"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "焼いた牛を焦がし米だれで。東北の流儀。"
+ },
+ {
+  "id": "gai-tod-hat-yai",
+  "name_ja": "ガイトートハットヤイ",
+  "name_local": "ไก่ทอดหาดใหญ่",
+  "cuisine": "th",
+  "effort_min": 35,
+  "ingredients": [
+   "鶏もも肉",
+   "紫玉ねぎ",
+   "にんにく",
+   "ナンプラー",
+   "片栗粉",
+   "砂糖"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "揚げ玉ねぎをまとう南部のフライドチキン。"
+ },
+ {
+  "id": "gai-kolae",
+  "name_ja": "ガイコーレー",
+  "name_local": "ไก่กอและ",
+  "cuisine": "th",
+  "effort_min": 35,
+  "ingredients": [
+   "鶏もも肉",
+   "ココナッツミルク",
+   "レッドカレーペースト",
+   "砂糖",
+   "ピーナッツ"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "深南部の甘辛グリルチキン、照りが罪。"
+ },
+ {
+  "id": "sai-ua",
+  "name_ja": "サイウア",
+  "name_local": "ไส้อั่ว",
+  "cuisine": "th",
+  "effort_min": 35,
+  "ingredients": [
+   "豚ひき肉",
+   "レッドカレーペースト",
+   "パクチー",
+   "にんにく",
+   "ライム"
+  ],
+  "heaviness": 4,
+  "rarity": 3,
+  "note": "北部ハーブソーセージを皮なしで焼く。"
+ },
+ {
+  "id": "tod-man-kung",
+  "name_ja": "トートマンクン",
+  "name_local": "ทอดมันกุ้ง",
+  "cuisine": "th",
+  "effort_min": 30,
+  "ingredients": [
+   "えび",
+   "卵",
+   "パン粉",
+   "片栗粉",
+   "スイートチリソース"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "プリプリを揚げてスイートチリで。"
+ },
+ {
+  "id": "popia-tod",
+  "name_ja": "ポピアトート",
+  "name_local": "ปอเปี๊ยะทอด",
+  "cuisine": "th",
+  "effort_min": 40,
+  "ingredients": [
+   "春巻きの皮",
+   "豚ひき肉",
+   "春雨",
+   "キャベツ",
+   "にんにく"
+  ],
+  "heaviness": 4,
+  "rarity": 1,
+  "note": "タイの揚げ春巻きはおかずで主役級。"
+ },
+ {
+  "id": "giao-tod",
+  "name_ja": "ギアオトート",
+  "name_local": "เกี๊ยวทอด",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "ワンタンの皮",
+   "豚ひき肉",
+   "えび",
+   "パクチー",
+   "スイートチリソース"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "揚げワンタンは手が止まらない前菜。"
+ },
+ {
+  "id": "khanom-pang-na-kung",
+  "name_ja": "カノムパンナークン",
+  "name_local": "ขนมปังหน้ากุ้ง",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "食パン",
+   "えび",
+   "卵",
+   "パクチー",
+   "パン粉"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "エビトースト、揚げた背徳の前菜。"
+ },
+ {
+  "id": "tod-man-khao-pod",
+  "name_ja": "トートマンカオポート",
+  "name_local": "ทอดมันข้าวโพด",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "とうもろこし",
+   "小麦粉",
+   "レッドカレーペースト",
+   "スイートチリソース"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "とうもろこしのスパイス揚げ、無限系。"
+ },
+ {
+  "id": "hoi-tod",
+  "name_ja": "ホイトート",
+  "name_local": "หอยทอด",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "牡蠣",
+   "卵",
+   "小麦粉",
+   "片栗粉",
+   "もやし"
+  ],
+  "heaviness": 4,
+  "rarity": 2,
+  "note": "牡蠣のカリとろ焼き、屋台の鉄板の味。"
+ },
+ {
+  "id": "kung-pao",
+  "name_ja": "クンパオ",
+  "name_local": "กุ้งเผา",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "有頭えび",
+   "にんにく",
+   "ライム",
+   "パクチー",
+   "唐辛子"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "焼きえびとシーフードだれの最強タッグ。"
+ },
+ {
+  "id": "pla-pao",
+  "name_ja": "プラーパオ",
+  "name_local": "ปลาเผา",
+  "cuisine": "th",
+  "effort_min": 45,
+  "ingredients": [
+   "鯛",
+   "塩",
+   "にんにく",
+   "ライム",
+   "パクチー",
+   "唐辛子"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "塩の鎧で焼く魚、割る瞬間が主役。"
+ },
+ {
+  "id": "pla-nueng-si-iw",
+  "name_ja": "プラーヌンシーイウ",
+  "name_local": "ปลานึ่งซีอิ๊ว",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "白身魚",
+   "醤油",
+   "しょうが",
+   "長ねぎ",
+   "ごま油"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "魚の醤油蒸し、湯気ごとごちそう。"
+ },
+ {
+  "id": "pla-tod-nam-pla",
+  "name_ja": "プラートートナムプラー",
+  "name_local": "ปลาทอดน้ำปลา",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "白身魚",
+   "ナンプラー",
+   "砂糖",
+   "片栗粉"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "揚げ魚にナンプラーだれ。それだけで強い。"
+ },
+ {
+  "id": "moo-hong",
+  "name_ja": "ムーホン",
+  "name_local": "หมูฮ้อง",
+  "cuisine": "th",
+  "effort_min": 60,
+  "ingredients": [
+   "豚バラブロック",
+   "にんにく",
+   "パクチー",
+   "醤油",
+   "砂糖"
+  ],
+  "heaviness": 5,
+  "rarity": 3,
+  "note": "プーケットの黒い豚角煮、甘くて深い。"
+ },
+ {
+  "id": "kai-yat-sai",
+  "name_ja": "カイヤッサイ",
+  "name_local": "ไข่ยัดไส้",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "卵",
+   "豚ひき肉",
+   "玉ねぎ",
+   "トマト",
+   "ナンプラー",
+   "ケチャップ"
+  ],
+  "heaviness": 3,
+  "rarity": 2,
+  "note": "肉野菜を包む、タイの実家のオムレツ。"
+ },
+ {
+  "id": "kai-tun",
+  "name_ja": "カイトゥン",
+  "name_local": "ไข่ตุ๋น",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "卵",
+   "豚ひき肉",
+   "しょうが",
+   "パクチー",
+   "ナンプラー"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "タイの茶碗蒸しはおかずになる濃さ。"
+ },
+ {
+  "id": "kai-luk-koei",
+  "name_ja": "カイルークーイ",
+  "name_local": "ไข่ลูกเขย",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "卵",
+   "紫玉ねぎ",
+   "ナンプラー",
+   "砂糖",
+   "ライム"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "揚げ卵に甘酸っぱだれ。名は「婿の卵」。"
+ },
+ {
+  "id": "yam-kai-dao",
+  "name_ja": "ヤムカイダーオ",
+  "name_local": "ยำไข่ดาว",
+  "cuisine": "th",
+  "effort_min": 10,
+  "ingredients": [
+   "卵",
+   "紫玉ねぎ",
+   "ミニトマト",
+   "パクチー",
+   "ナンプラー",
+   "ライム"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "カリカリ目玉焼きがサラダになる。"
+ },
+ {
+  "id": "yam-talay",
+  "name_ja": "ヤムタレー",
+  "name_local": "ยำทะเล",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "シーフードミックス",
+   "紫玉ねぎ",
+   "パクチー",
+   "ナンプラー",
+   "ライム",
+   "唐辛子"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "海鮮を酸っぱ辛くまとめる大人の皿。"
+ },
+ {
+  "id": "moo-manao",
+  "name_ja": "ムーマナオ",
+  "name_local": "หมูมะนาว",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "豚ロース肉",
+   "ライム",
+   "にんにく",
+   "唐辛子",
+   "パクチー",
+   "砂糖"
+  ],
+  "heaviness": 2,
+  "rarity": 2,
+  "note": "茹で豚にライムの洪水。夏に効く。"
+ },
+ {
+  "id": "nam-tok-moo",
+  "name_ja": "ナムトックムー",
+  "name_local": "น้ำตกหมู",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "豚肩ロース肉",
+   "紫玉ねぎ",
+   "パクチー",
+   "ミント",
+   "ライム",
+   "ナンプラー",
+   "米"
+  ],
+  "heaviness": 2,
+  "rarity": 3,
+  "note": "焼き豚を滝のたれで和えるイサーン飯。"
+ },
+ {
+  "id": "sup-no-mai",
+  "name_ja": "スップノーマイ",
+  "name_local": "ซุปหน่อไม้",
+  "cuisine": "th",
+  "effort_min": 20,
+  "ingredients": [
+   "たけのこ",
+   "パクチー",
+   "ライム",
+   "ナンプラー",
+   "唐辛子",
+   "米"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "たけのこの辛い和え物、通のイサーン味。"
+ },
+ {
+  "id": "som-tam-khao-pod",
+  "name_ja": "ソムタムカオポート",
+  "name_local": "ส้มตำข้าวโพด",
+  "cuisine": "th",
+  "effort_min": 15,
+  "ingredients": [
+   "とうもろこし",
+   "ミニトマト",
+   "いんげん",
+   "ピーナッツ",
+   "ナンプラー",
+   "ライム"
+  ],
+  "heaviness": 1,
+  "rarity": 2,
+  "note": "とうもろこしのソムタム、甘辛酸の三重奏。"
+ },
+ {
+  "id": "nam-prik-num",
+  "name_ja": "ナムプリックヌム",
+  "name_local": "น้ำพริกหนุ่ม",
+  "cuisine": "th",
+  "effort_min": 25,
+  "ingredients": [
+   "青唐辛子",
+   "ピーマン",
+   "にんにく",
+   "紫玉ねぎ",
+   "ナンプラー",
+   "きゅうり"
+  ],
+  "heaviness": 1,
+  "rarity": 3,
+  "note": "焼き青唐辛子のディップ、野菜が進む。"
+ }
+]

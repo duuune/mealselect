@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0f12">
+<link rel="manifest" href="manifest.json">
+<title>今夜これ</title>
+<style>
+  :root {
+    --bg: #0e0f12;
+    --fg: #f0ede6;
+    --fg-sub: #9a978f;
+    --accent: #e8a34b;
+    --accent-fg: #1a1206;
+    --ok: #8fbf7f;
+    --line: #33363d;
+    --chip-bg: rgba(255, 255, 255, .08);
+    --card-shadow: 0 12px 40px rgba(0, 0, 0, .45);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f4f1ea;
+      --fg: #26241f;
+      --fg-sub: #75726a;
+      --accent: #c97a1e;
+      --accent-fg: #fff8ec;
+      --ok: #3e7d3a;
+      --line: #d8d3c7;
+      --chip-bg: rgba(0, 0, 0, .06);
+      --card-shadow: 0 12px 32px rgba(60, 50, 30, .18);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: max(10px, env(safe-area-inset-top)) 14px 0;
+  }
+  #btnHome {
+    background: none;
+    border: none;
+    color: var(--fg-sub);
+    font-size: .92rem;
+    padding: 8px;
+    cursor: pointer;
+  }
+  #btnSettings {
+    background: none;
+    border: none;
+    color: var(--fg-sub);
+    font-size: 22px;
+    padding: 8px;
+    cursor: pointer;
+    line-height: 1;
+    margin-left: auto;
+  }
+
+  section.screen {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .stage {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+  }
+  /* 操作要素は画面下1/3に集める */
+  .controls {
+    flex: none;
+    padding: 12px 20px calc(18px + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 460px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ---- カード ---- */
+  #card {
+    width: min(92vw, 420px);
+    border-radius: 22px;
+    padding: 34px 26px 30px;
+    box-shadow: var(--card-shadow);
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: transform .2s ease, opacity .2s ease;
+    will-change: transform;
+  }
+  #card.out-left  { transform: translateX(-120%) rotate(-5deg); opacity: 0; }
+  #card.out-right { transform: translateX(120%) rotate(5deg); opacity: 0; }
+  #card.no-anim   { transition: none; }
+  @media (prefers-reduced-motion: reduce) {
+    #card { transition: none; }
+  }
+  .badge {
+    display: inline-block;
+    font-size: .72rem;
+    letter-spacing: .08em;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 3px 10px;
+    margin-bottom: 14px;
+  }
+  #cName {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    font-size: clamp(1.9rem, 9.5vw, 2.6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  #cLocal {
+    margin-top: 6px;
+    color: var(--fg-sub);
+    font-size: .95rem;
+  }
+  #cNote {
+    margin-top: 18px;
+    font-size: 1.02rem;
+    line-height: 1.65;
+  }
+  #cTime {
+    display: block;
+    margin-top: 16px;
+    color: var(--fg-sub);
+    font-size: .88rem;
+  }
+  #cMissing { margin-top: 14px; }
+  #cMissing .label {
+    font-size: .78rem;
+    color: var(--fg-sub);
+    margin-bottom: 6px;
+  }
+  #cMissing .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  #cMissing .chip {
+    background: var(--chip-bg);
+    border-radius: 8px;
+    padding: 4px 9px;
+    font-size: .85rem;
+  }
+  #cMissing .ok { color: var(--ok); font-size: .92rem; }
+
+  /* ---- ボタン ---- */
+  button { font-family: inherit; cursor: pointer; }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-fg);
+    border: none;
+    border-radius: 16px;
+    padding: 17px;
+    font-size: 1.12rem;
+    font-weight: 700;
+    width: 100%;
+  }
+  .btn-primary:active { transform: scale(.98); }
+  .btn-ghost {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--fg);
+    border-radius: 16px;
+    padding: 13px;
+    font-size: .98rem;
+    width: 100%;
+  }
+  .btn-text {
+    background: none;
+    border: none;
+    color: var(--fg-sub);
+    font-size: .85rem;
+    padding: 8px;
+    align-self: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  /* ---- タイ料理/それ以外の切り替えタブ ---- */
+  #modeTabs {
+    display: flex;
+    justify-content: center;
+    padding: 2px 20px 0;
+  }
+  #modeTabs .tab {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--fg-sub);
+    padding: 9px 26px;
+    font-size: .92rem;
+  }
+  #modeTabs .tab:first-child { border-radius: 999px 0 0 999px; }
+  #modeTabs .tab:last-child { border-radius: 0 999px 999px 0; border-left: none; }
+  #modeTabs .tab.active {
+    background: var(--chip-bg);
+    color: var(--fg);
+    font-weight: 600;
+  }
+
+  /* ---- 質問系画面 ---- */
+  .q-title {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 10px;
+    overflow-wrap: anywhere;
+  }
+
+  /* ---- 決定後 ---- */
+  .d-name {
+    color: var(--fg-sub);
+    font-size: 1.05rem;
+    text-align: center;
+  }
+  .d-big {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 14px;
+  }
+  .d-local {
+    color: var(--fg-sub);
+    font-size: .85rem;
+    text-align: center;
+    margin-top: 4px;
+  }
+  .d-sub {
+    color: var(--fg-sub);
+    font-size: .92rem;
+    text-align: center;
+    margin-top: 14px;
+  }
+  #shopList {
+    margin-top: 22px;
+    width: min(84vw, 340px);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  #shopList .s-label {
+    font-size: .82rem;
+    color: var(--fg-sub);
+    margin-bottom: 6px;
+  }
+  #shopList label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.08rem;
+    padding: 10px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  #shopList input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent);
+  }
+  #shopList label:has(input:checked) span {
+    text-decoration: line-through;
+    color: var(--fg-sub);
+  }
+
+  .err-box { text-align: center; padding: 0 24px; line-height: 1.9; color: var(--fg-sub); }
+
+  /* ---- 設定 ---- */
+  #scr-settings {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    z-index: 10;
+    overflow-y: auto;
+    padding: max(16px, env(safe-area-inset-top)) 20px calc(40px + env(safe-area-inset-bottom));
+  }
+  .set-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .set-head h2 { font-size: 1.15rem; }
+  .set-head button {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--fg);
+    border-radius: 12px;
+    padding: 8px 18px;
+    font-size: .9rem;
+  }
+  #scr-settings section { max-width: 460px; margin: 26px auto 0; }
+  #scr-settings h3 { font-size: .95rem; color: var(--fg-sub); margin-bottom: 4px; }
+  .set-note { font-size: .8rem; color: var(--fg-sub); margin-bottom: 10px; }
+  #pantryList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px 14px;
+  }
+  #pantryList label {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    padding: 7px 2px;
+    font-size: .95rem;
+  }
+  #pantryList input { width: 18px; height: 18px; accent-color: var(--accent); flex: none; }
+  #exportArea {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    background: var(--chip-bg);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: .75rem;
+  }
+  #exportMsg { margin-top: 8px; margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <button id="btnHome" hidden>&#8592; トップ</button>
+  <button id="btnSettings" aria-label="設定">&#9881;</button>
+</header>
+
+<!-- カード画面 -->
+<section class="screen" id="scr-card" hidden>
+  <div id="modeTabs">
+    <button class="tab" data-mode="th">タイ料理</button>
+    <button class="tab" data-mode="not-th">それ以外</button>
+  </div>
+  <div class="stage">
+    <article id="card">
+      <div class="badge" id="cBadge" hidden>はじめての料理</div>
+      <h1 id="cName"></h1>
+      <div id="cLocal" hidden></div>
+      <p id="cNote"></p>
+      <span id="cTime"></span>
+      <div id="cMissing"></div>
+    </article>
+  </div>
+  <div class="controls">
+    <button class="btn-primary" id="btnDecide">これにする</button>
+    <button class="btn-ghost" id="btnReroll">別のを見る</button>
+    <button class="btn-text" id="btnEatOut">今日は無理</button>
+  </div>
+</section>
+
+<!-- エスカレーション質問（2回目のリロール直後のみ） -->
+<section class="screen" id="scr-escalation" hidden>
+  <div class="stage"><h2 class="q-title">今日、どうする？</h2></div>
+  <div class="controls">
+    <button class="btn-ghost" data-esc="quick">ぱっと作りたい</button>
+    <button class="btn-ghost" data-esc="proper">ちゃんと作る</button>
+    <button class="btn-ghost" data-esc="buy-nothing">買い物はしたくない</button>
+    <button class="btn-text" data-esc="as-is">そのままでいい</button>
+  </div>
+</section>
+
+<!-- 前日フィードバック（1日1問だけ） -->
+<section class="screen" id="scr-feedback" hidden>
+  <div class="stage"><h2 class="q-title" id="fbTitle"></h2></div>
+  <div class="controls">
+    <button class="btn-primary" id="btnAte">食べた</button>
+    <button class="btn-ghost" id="btnNotAte">食べなかった</button>
+  </div>
+</section>
+
+<!-- 決定後 -->
+<section class="screen" id="scr-decided" hidden>
+  <div class="stage">
+    <div>
+      <div class="d-name" id="dName"></div>
+      <div class="d-local" id="dLocal" hidden></div>
+      <div class="d-big" id="dBig" hidden>作れる。</div>
+      <div id="shopList" hidden></div>
+    </div>
+  </div>
+  <div class="controls"></div>
+</section>
+
+<!-- 今日は無理 -->
+<section class="screen" id="scr-eatout" hidden>
+  <div class="stage">
+    <div>
+      <div class="d-big">今日は無理な日。</div>
+      <div class="d-sub">外食でもデリバリーでも。また明日。</div>
+    </div>
+  </div>
+  <div class="controls"></div>
+</section>
+
+<!-- データ読み込みエラー -->
+<section class="screen" id="scr-error" hidden>
+  <div class="stage">
+    <div class="err-box">
+      dishes.json が読めない。<br>
+      <code>python build.py</code> を実行してから<br>
+      <code>python -m http.server</code> 経由で開くこと。
+    </div>
+  </div>
+</section>
+
+<!-- 設定（オーバーレイ） -->
+<div id="scr-settings" hidden>
+  <div class="set-head">
+    <h2>設定</h2>
+    <button id="btnCloseSettings">閉じる</button>
+  </div>
+  <section>
+    <h3>常備品</h3>
+    <p class="set-note">チェックした物は「買うもの」に出ない。</p>
+    <div id="pantryList"></div>
+  </section>
+  <section>
+    <h3>計測ログ</h3>
+    <p class="set-note" id="logCount"></p>
+    <button class="btn-ghost" id="btnExport">JSONをクリップボードにコピー</button>
+    <textarea id="exportArea" readonly hidden></textarea>
+    <p class="set-note" id="exportMsg"></p>
+  </section>
+</div>
+
+<script>
+"use strict";
+
+/* ================= 調整可能な定数 ================= */
+const CONFIG = {
+  RECENT_EXCLUDE_DAYS: 14,    // 直近この日数に実食した料理は出さない
+  WEIGHT_RARITY2: 0.6,        // rarity 2 の重み
+  WEIGHT_RARITY3: 0.2,        // rarity 3 の重み
+  WEIGHT_LONG_EFFORT: 0.5,    // effort_min が LONG_EFFORT_MIN 超のときの重み
+  LONG_EFFORT_MIN: 60,
+  QUICK_EFFORT_MAX: 20,       // 「ぱっと作りたい」の上限（分）
+  ESCALATION_AFTER_REROLL: 2, // n回目のリロール直後に1問だけ聞く
+  SWIPE_THRESHOLD_PX: 80,     // スワイプ確定のしきい値
+  TRANSITION_MS: 200,         // カード切り替えの時間
+};
+
+/* 常備品の品目マスタ。dishes.yaml の ingredients と表記を揃えること */
+const PANTRY_ITEMS = [
+  "米", "卵", "醤油", "味噌", "みりん", "酒", "砂糖", "塩", "酢",
+  "サラダ油", "ごま油", "片栗粉", "小麦粉", "パン粉", "だしの素", "コンソメ",
+  "鶏ガラスープの素", "カレールー", "カレー粉", "マヨネーズ", "ケチャップ", "中濃ソース",
+  "バター", "ツナ缶", "にんにく", "しょうが", "玉ねぎ", "じゃがいも", "にんじん",
+  "ナンプラー", "オイスターソース", "ココナッツミルク", "スイートチリソース",
+  "レッドカレーペースト", "グリーンカレーペースト", "トムヤムペースト",
+  "チリインオイル（ナムプリックパオ）", "ピーナッツ", "春雨", "唐辛子",
+];
+/* 初回起動時にチェック済みにしておく品目（設定画面でいつでも変えられる） */
+const PANTRY_DEFAULT = [
+  "米", "卵", "醤油", "味噌", "みりん", "酒", "砂糖", "塩", "酢",
+  "サラダ油", "ごま油", "片栗粉", "小麦粉", "だしの素", "にんにく", "しょうが",
+];
+
+/* ================= 状態 ================= */
+const KEY = { pantry: "yh.pantry", log: "yh.log", session: "yh.session", fbdate: "yh.fbdate", mode: "yh.mode" };
+const store = {
+  get(k, fallback) {
+    try {
+      const v = localStorage.getItem(k);
+      return v === null ? fallback : JSON.parse(v);
+    } catch { return fallback; }
+  },
+  set(k, v) {
+    try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 容量超過等は諦める */ }
+  },
+};
+
+let DISHES = [];
+let DISH_BY_ID = new Map();
+let S = { pantry: null, log: [], session: null, fbdate: null, mode: "all" };
+let busy = false; // トランジション中の多重操作ガード
+
+/* ================= 日時ユーティリティ ================= */
+function isoLocal(d) {
+  const p = (n) => String(n).padStart(2, "0");
+  const off = -d.getTimezoneOffset();
+  const sign = off >= 0 ? "+" : "-";
+  const a = Math.abs(off);
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}` +
+    `T${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}` +
+    `${sign}${p(Math.floor(a / 60))}:${p(a % 60)}`;
+}
+function dateKey(d) {
+  const p = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+const todayKey = () => dateKey(new Date());
+
+/* ================= 常備品と不足 ================= */
+function pantrySet() {
+  return new Set(Object.keys(S.pantry).filter((k) => S.pantry[k]));
+}
+function missingOf(dish) {
+  const have = pantrySet();
+  return dish.ingredients.filter((i) => !have.has(i));
+}
+
+/* ================= 抽選 ================= */
+function recentDecidedIds() {
+  const limit = CONFIG.RECENT_EXCLUDE_DAYS * 86400000;
+  const now = Date.now();
+  const ids = new Set();
+  for (const e of S.log) {
+    if (e.outcome !== "decided" || !e.decided_dish_id) continue;
+    if (e.ate_it === false) continue; // 食べなかったものは候補に戻す
+    const t = Date.parse(e.session_start);
+    if (!Number.isNaN(t) && now - t <= limit) ids.add(e.decided_dish_id);
+  }
+  return ids;
+}
+function passesEscalation(dish) {
+  const ans = S.session?.escalation?.answer;
+  if (ans === "quick") {
+    return dish.effort_min <= CONFIG.QUICK_EFFORT_MAX && missingOf(dish).length === 0;
+  }
+  if (ans === "buy-nothing") return missingOf(dish).length === 0;
+  return true; // proper / as-is / 未回答
+}
+function weightOf(dish) {
+  let w = 1.0;
+  if (dish.rarity === 2) w *= CONFIG.WEIGHT_RARITY2;
+  if (dish.rarity === 3) w *= CONFIG.WEIGHT_RARITY3;
+  if (dish.effort_min > CONFIG.LONG_EFFORT_MIN) w *= CONFIG.WEIGHT_LONG_EFFORT;
+  return w;
+}
+function weightedPick(list) {
+  const total = list.reduce((s, d) => s + weightOf(d), 0);
+  let r = Math.random() * total;
+  for (const d of list) {
+    r -= weightOf(d);
+    if (r <= 0) return d;
+  }
+  return list[list.length - 1];
+}
+/* 候補が空なら除外条件を段階的に緩める:
+   stage 0: 直近実食を除外 + セッション既出を除外 + 質問の絞り込み
+   stage 1: 直近実食の除外をやめる
+   stage 2: 質問の絞り込みもやめる
+   stage 3: 既出の除外もやめる（＝全件） */
+function modeAllows(dish) {
+  return S.mode === "th" ? dish.cuisine === "th" : dish.cuisine !== "th";
+}
+function drawDish() {
+  // 「出すメニュー」設定はユーザー宣言の絶対条件なので、緩和の対象にしない
+  const base = DISHES.filter(modeAllows);
+  const pool = base.length > 0 ? base : DISHES;
+  const recent = recentDecidedIds();
+  const shown = new Set(S.session.shown);
+  for (let stage = 0; stage <= 3; stage++) {
+    const c = pool.filter((d) =>
+      (stage >= 3 || !shown.has(d.id)) &&
+      (stage >= 1 || !recent.has(d.id)) &&
+      (stage >= 2 || passesEscalation(d))
+    );
+    if (c.length > 0) return weightedPick(c);
+  }
+  return weightedPick(pool); // 到達しないはずの保険
+}
+
+/* ================= 計測ログ ================= */
+function makeRecord(outcome, endIso) {
+  const sess = S.session;
+  const end = endIso || isoLocal(new Date());
+  const startMs = Date.parse(sess.session_start);
+  const endMs = Date.parse(end);
+  return {
+    session_start: sess.session_start,
+    session_end: end,
+    elapsed_sec: Math.max(0, Math.round((endMs - startMs) / 1000)),
+    rerolls_used: sess.rerolls_used,
+    escalation_answer: sess.escalation.answer,
+    shown_dish_ids: [...sess.shown],
+    outcome,
+    decided_dish_id: outcome === "decided" ? sess.decided_dish_id : null,
+    ate_it: null,
+  };
+}
+function appendLog(rec) {
+  S.log.push(rec);
+  store.set(KEY.log, S.log);
+}
+function saveSession() {
+  if (S.session) S.session.last_activity = isoLocal(new Date());
+  store.set(KEY.session, S.session);
+}
+
+/* ================= 画面切り替え ================= */
+const $ = (id) => document.getElementById(id);
+const SCREENS = ["scr-card", "scr-escalation", "scr-feedback", "scr-decided", "scr-eatout", "scr-error"];
+function showScreen(id) {
+  for (const s of SCREENS) $(s).hidden = s !== id;
+  // トップ（カード画面）以外では「← トップ」を出す
+  $("btnHome").hidden = id === "scr-card" || id === "scr-error";
+}
+
+/* ================= カード描画 ================= */
+function cardColor(dish) {
+  const light = matchMedia("(prefers-color-scheme: light)").matches;
+  const hue = (dish.cuisine === "ja" ? 220 : 22) + (dish.heaviness - 3) * 6;
+  if (light) {
+    return `hsl(${hue} ${30 + dish.heaviness * 8}% ${93 - dish.heaviness * 4}%)`;
+  }
+  return `hsl(${hue} ${16 + dish.heaviness * 6}% ${14 + dish.heaviness * 2}%)`;
+}
+function currentDish() {
+  const id = S.session.shown[S.session.shown.length - 1];
+  return DISH_BY_ID.get(id);
+}
+function renderCard() {
+  const dish = currentDish();
+  if (!dish) return;
+  const card = $("card");
+  card.style.background = cardColor(dish);
+
+  $("cBadge").hidden = dish.rarity !== 3;
+  $("cName").textContent = dish.name_ja;
+  $("cLocal").textContent = dish.name_local || "";
+  $("cLocal").hidden = !dish.name_local;
+  $("cNote").textContent = dish.note;
+  $("cTime").textContent = `調理 ${dish.effort_min}分`;
+
+  const miss = missingOf(dish);
+  const box = $("cMissing");
+  if (miss.length === 0) {
+    box.innerHTML = `<div class="ok">買い物なしでいける</div>`;
+  } else {
+    box.innerHTML =
+      `<div class="label">買うもの</div><div class="chips">` +
+      miss.map((m) => `<span class="chip">${m}</span>`).join("") +
+      `</div>`;
+  }
+
+}
+
+/* ================= セッション進行 ================= */
+function startSession() {
+  S.session = {
+    date: todayKey(),
+    session_start: isoLocal(new Date()),
+    shown: [],
+    rerolls_used: 0,
+    escalation: { asked: false, answer: null },
+    outcome: null,
+    decided_dish_id: null,
+    checked: {},
+    last_activity: isoLocal(new Date()),
+  };
+  drawNext();
+  showScreen("scr-card");
+}
+function drawNext() {
+  const dish = drawDish();
+  S.session.shown.push(dish.id);
+  saveSession();
+  renderCard();
+}
+function canReroll() {
+  return !busy && S.session && !S.session.outcome;
+}
+/* 表示中のカードを左に流し、新しい1枚を引いて右から入れる */
+function replaceCard() {
+  const card = $("card");
+  busy = true;
+  card.style.transform = "";
+  card.style.transition = "";
+  card.classList.add("out-left");
+  setTimeout(() => {
+    card.classList.add("no-anim");
+    card.classList.remove("out-left");
+    drawNext();
+    enterFromRight(card);
+  }, CONFIG.TRANSITION_MS);
+}
+function doReroll() {
+  if (!canReroll()) return;
+  S.session.rerolls_used += 1;
+  saveSession();
+  if (
+    S.session.rerolls_used === CONFIG.ESCALATION_AFTER_REROLL &&
+    !S.session.escalation.asked
+  ) {
+    // 次のカードを表示する前に1問だけ挟む
+    const card = $("card");
+    busy = true;
+    card.style.transform = "";
+    card.style.transition = "";
+    card.classList.add("out-left");
+    setTimeout(() => {
+      card.classList.add("no-anim");
+      card.classList.remove("out-left");
+      card.classList.remove("no-anim");
+      busy = false;
+      showScreen("scr-escalation");
+    }, CONFIG.TRANSITION_MS);
+    return;
+  }
+  replaceCard();
+}
+/* タブ切り替え。表示中のカードもそのレーンから引き直す */
+function renderTabs() {
+  document.querySelectorAll("#modeTabs .tab").forEach((b) => {
+    b.classList.toggle("active", b.dataset.mode === S.mode);
+  });
+}
+function setMode(mode) {
+  if (busy || S.mode === mode) return;
+  S.mode = mode;
+  store.set(KEY.mode, S.mode);
+  renderTabs();
+  if (S.session && !S.session.outcome && S.session.shown.length > 0) {
+    const cur = currentDish();
+    if (!cur || !modeAllows(cur)) replaceCard();
+  }
+}
+function enterFromRight(card) {
+  card.classList.add("out-right");
+  void card.offsetWidth;
+  card.classList.remove("no-anim");
+  card.classList.remove("out-right");
+  setTimeout(() => { busy = false; }, CONFIG.TRANSITION_MS);
+}
+function answerEscalation(ans) {
+  if (busy || !S.session || S.session.escalation.asked) return;
+  S.session.escalation = { asked: true, answer: ans };
+  saveSession();
+  showScreen("scr-card");
+  const card = $("card");
+  busy = true;
+  card.classList.add("no-anim");
+  drawNext();
+  enterFromRight(card);
+}
+function doDecide() {
+  if (busy || !S.session || S.session.outcome) return;
+  const dish = currentDish();
+  S.session.outcome = "decided";
+  S.session.decided_dish_id = dish.id;
+  appendLog(makeRecord("decided"));
+  saveSession();
+  busy = true;
+  const card = $("card");
+  card.style.transform = "";
+  card.style.transition = "";
+  card.classList.add("out-right");
+  setTimeout(() => {
+    card.classList.remove("out-right");
+    busy = false;
+    showDecided();
+  }, CONFIG.TRANSITION_MS);
+}
+function doEatOut() {
+  if (busy || !S.session || S.session.outcome) return;
+  S.session.outcome = "eat-out";
+  appendLog(makeRecord("eat-out"));
+  saveSession();
+  showScreen("scr-eatout");
+}
+
+/* ================= どこからでもトップへ ================= */
+function removeLogRecord(sessionStart) {
+  for (let i = S.log.length - 1; i >= 0; i--) {
+    if (S.log[i].session_start === sessionStart) {
+      S.log.splice(i, 1);
+      store.set(KEY.log, S.log);
+      return;
+    }
+  }
+}
+function goHome() {
+  if (busy) return;
+  if (!$("scr-feedback").hidden) {
+    // 前日の質問をスキップして今日を始める（ate_it は未回答のまま）
+    S.fbdate = todayKey();
+    store.set(KEY.fbdate, S.fbdate);
+    startSession();
+    return;
+  }
+  if (!S.session) return;
+  if (!$("scr-escalation").hidden) {
+    answerEscalation(null); // 未回答のまま次のカードへ（リロールは消費済み）
+    return;
+  }
+  if (S.session.outcome === "decided" || S.session.outcome === "eat-out") {
+    // 当日中なら結果を取り消して直前のカードに戻す。残り回数は増えも減りもしない
+    removeLogRecord(S.session.session_start);
+    S.session.outcome = null;
+    S.session.decided_dish_id = null;
+    saveSession();
+    renderCard();
+    showScreen("scr-card");
+  }
+}
+
+/* ================= 決定後画面 ================= */
+function showDecided() {
+  const dish = DISH_BY_ID.get(S.session.decided_dish_id);
+  $("dName").textContent = dish ? dish.name_ja : "";
+  $("dLocal").textContent = (dish && dish.name_local) || "";
+  $("dLocal").hidden = !(dish && dish.name_local);
+  const miss = dish ? missingOf(dish) : [];
+  $("dBig").hidden = miss.length !== 0;
+  const list = $("shopList");
+  list.hidden = miss.length === 0;
+  if (miss.length > 0) {
+    list.innerHTML =
+      `<div class="s-label">買うもの</div>` +
+      miss.map((m) =>
+        `<label><input type="checkbox" data-item="${m}"${S.session.checked[m] ? " checked" : ""}><span>${m}</span></label>`
+      ).join("");
+    list.querySelectorAll("input").forEach((cb) => {
+      cb.addEventListener("change", () => {
+        S.session.checked[cb.dataset.item] = cb.checked;
+        saveSession();
+      });
+    });
+  }
+  showScreen("scr-decided");
+}
+
+/* ================= 前日フィードバック ================= */
+function pendingFeedback() {
+  if (S.fbdate === todayKey()) return null; // 1日1回まで
+  for (let i = S.log.length - 1; i >= 0; i--) {
+    const e = S.log[i];
+    if (e.outcome === "decided" && e.ate_it === null) {
+      if (dateKey(new Date(Date.parse(e.session_start))) < todayKey()) return e;
+      return null; // 今日決めた分はまだ聞かない
+    }
+  }
+  return null;
+}
+function showFeedback(entry) {
+  const dish = DISH_BY_ID.get(entry.decided_dish_id);
+  const name = dish ? dish.name_ja : "夕飯";
+  const yest = dateKey(new Date(Date.now() - 86400000));
+  const when = dateKey(new Date(Date.parse(entry.session_start))) === yest ? "昨日" : "この前";
+  $("fbTitle").textContent = `${when}の${name}、食べた？`;
+  showScreen("scr-feedback");
+  const answer = (ate) => {
+    entry.ate_it = ate;
+    store.set(KEY.log, S.log);
+    S.fbdate = todayKey();
+    store.set(KEY.fbdate, S.fbdate);
+    startSession();
+  };
+  $("btnAte").onclick = () => answer(true);
+  $("btnNotAte").onclick = () => answer(false);
+}
+
+/* ================= スワイプ（右=これにする / 左=別のを見る） ================= */
+function setupSwipe() {
+  const card = $("card");
+  let drag = null;
+  card.addEventListener("pointerdown", (e) => {
+    if (busy || !S.session || S.session.outcome) return;
+    drag = { x0: e.clientX, y0: e.clientY, dx: 0, active: false };
+    card.setPointerCapture(e.pointerId);
+  });
+  card.addEventListener("pointermove", (e) => {
+    if (!drag) return;
+    const dx = e.clientX - drag.x0;
+    const dy = e.clientY - drag.y0;
+    if (!drag.active) {
+      if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) drag.active = true;
+      else if (Math.abs(dy) > 14) { drag = null; return; }
+      else return;
+    }
+    drag.dx = dx;
+    card.style.transition = "none";
+    card.style.transform = `translateX(${dx}px) rotate(${dx / 40}deg)`;
+  });
+  const finish = () => {
+    if (!drag) return;
+    const dx = drag.dx;
+    drag = null;
+    card.style.transition = "";
+    card.style.transform = "";
+    if (dx > CONFIG.SWIPE_THRESHOLD_PX) doDecide();
+    else if (dx < -CONFIG.SWIPE_THRESHOLD_PX && canReroll()) doReroll();
+  };
+  card.addEventListener("pointerup", finish);
+  card.addEventListener("pointercancel", () => {
+    if (!drag) return;
+    drag = null;
+    card.style.transition = "";
+    card.style.transform = "";
+  });
+}
+
+/* ================= 設定 ================= */
+function openSettings() {
+  const box = $("pantryList");
+  box.innerHTML = PANTRY_ITEMS.map((item) =>
+    `<label><input type="checkbox" data-p="${item}"${S.pantry[item] ? " checked" : ""}><span>${item}</span></label>`
+  ).join("");
+  box.querySelectorAll("input").forEach((cb) => {
+    cb.addEventListener("change", () => {
+      S.pantry[cb.dataset.p] = cb.checked;
+      store.set(KEY.pantry, S.pantry);
+      // 背後の画面の「不足しているもの」を即時更新
+      if (S.session && !S.session.outcome && S.session.shown.length > 0) renderCard();
+      if (S.session && S.session.outcome === "decided") showDecided();
+    });
+  });
+  $("logCount").textContent = `${S.log.length}件のセッションを記録済み。`;
+  $("exportArea").hidden = true;
+  $("exportMsg").textContent = "";
+  $("scr-settings").hidden = false;
+}
+async function exportLog() {
+  const json = JSON.stringify(S.log, null, 2);
+  const msg = $("exportMsg");
+  try {
+    await navigator.clipboard.writeText(json);
+    msg.textContent = `コピーした（${S.log.length}件）。`;
+  } catch {
+    // http 配信（非 https）ではクリップボードAPIが使えないので手動コピーに切り替える
+    const ta = $("exportArea");
+    ta.hidden = false;
+    ta.value = json;
+    ta.focus();
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch { /* noop */ }
+    msg.textContent = ok
+      ? `コピーした（${S.log.length}件）。`
+      : "自動コピーできない環境。上のテキストを長押しして手動でコピーして。";
+  }
+}
+
+/* ================= 起動 ================= */
+function resumeSession() {
+  // 描画待ちのまま閉じられていた場合の自己修復
+  if (S.session.shown.length === S.session.rerolls_used) {
+    if (
+      S.session.rerolls_used === CONFIG.ESCALATION_AFTER_REROLL &&
+      !S.session.escalation.asked
+    ) {
+      showScreen("scr-escalation");
+      return;
+    }
+    drawNext();
+  } else {
+    renderCard();
+  }
+  showScreen("scr-card");
+}
+async function init() {
+  try {
+    const res = await fetch("dishes.json");
+    if (!res.ok) throw new Error(res.status);
+    DISHES = await res.json();
+    DISH_BY_ID = new Map(DISHES.map((d) => [d.id, d]));
+  } catch {
+    showScreen("scr-error");
+    return;
+  }
+
+  S.pantry = store.get(KEY.pantry, null);
+  if (!S.pantry) {
+    S.pantry = {};
+    for (const item of PANTRY_DEFAULT) S.pantry[item] = true;
+    store.set(KEY.pantry, S.pantry);
+  }
+  S.log = store.get(KEY.log, []);
+  S.session = store.get(KEY.session, null);
+  S.fbdate = store.get(KEY.fbdate, null);
+  S.mode = store.get(KEY.mode, "th");
+  if (S.mode !== "th" && S.mode !== "not-th") S.mode = "th"; // 旧設定値の読み替え
+  renderTabs();
+
+  // 日付をまたいだ未完了セッションは abandoned として確定
+  if (S.session && S.session.date !== todayKey()) {
+    if (!S.session.outcome) {
+      appendLog(makeRecord("abandoned", S.session.last_activity || S.session.session_start));
+    }
+    S.session = null;
+    store.set(KEY.session, null);
+  }
+
+  if (S.session) {
+    // 今日はもう終わっているか、途中か
+    if (S.session.outcome === "decided") { showDecided(); return; }
+    if (S.session.outcome === "eat-out") { showScreen("scr-eatout"); return; }
+    resumeSession();
+    return;
+  }
+
+  const fb = pendingFeedback();
+  if (fb) { showFeedback(fb); return; }
+  startSession();
+}
+
+$("btnDecide").addEventListener("click", doDecide);
+$("btnReroll").addEventListener("click", doReroll);
+$("btnEatOut").addEventListener("click", doEatOut);
+$("btnHome").addEventListener("click", goHome);
+$("btnSettings").addEventListener("click", openSettings);
+document.querySelectorAll("#modeTabs .tab").forEach((b) => {
+  b.addEventListener("click", () => setMode(b.dataset.mode));
+});
+$("btnCloseSettings").addEventListener("click", () => { $("scr-settings").hidden = true; });
+$("btnExport").addEventListener("click", exportLog);
+document.querySelectorAll("[data-esc]").forEach((b) => {
+  b.addEventListener("click", () => answerEscalation(b.dataset.esc));
+});
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden" && S.session && !S.session.outcome) {
+    saveSession(); // last_activity を更新（abandoned の session_end 用）
+  }
+});
+matchMedia("(prefers-color-scheme: light)").addEventListener("change", () => {
+  if (S.session && !S.session.outcome && !$("scr-card").hidden) renderCard();
+});
+setupSwipe();
+init();
+
+// オフライン動作用。localhost か https のときだけ登録される（それ以外では SW 自体が使えない）
+if ("serviceWorker" in navigator) {
+  addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => { /* 未対応環境では諦める */ });
+  });
+}
+</script>
+</body>
+</html>
